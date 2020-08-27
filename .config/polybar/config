@@ -1,0 +1,104 @@
+[bar/mybar]
+font-0 = "Noto Sans Mono =style=Regular:size=8;2"
+font-1 = "Font Awesome 5 Brands,Font Awesome 5 Brands Regular:style=Regular:size=8;3"
+font-2 = "Font Awesome 5 Free,Font Awesome 5 Free Solid:style=Solid:size=8;3"
+font-3 = "Font Awesome 5 Free,Font Awesome 5 Free Regular:style=Regular:size=8;3"
+font-4 = "Noto Color Emoji:style=Regular:size=1"
+modules-right = date backlight pulseaudio network
+modules-center = reddit-modq
+modules-left = i3
+separator = |
+tray-position = right
+tray-maxsize = 12
+bottom = true
+height = 20
+module-margin = 1
+
+[colors]
+background = ${xrdb:background}
+foreground = ${xrdb:foreground}
+color0 = ${xrdb:color0}
+color1 = ${xrdb:color1}
+color2 = ${xrdb:color2}
+color3 = ${xrdb:color3}
+color4 = ${xrdb:color4}
+color5 = ${xrdb:color5}
+color6 = ${xrdb:color6}
+color7 = ${xrdb:color7}
+color8 = ${xrdb:color8}
+color9 = ${xrdb:color9}
+color10 = ${xrdb:color10}
+color11 = ${xrdb:color11}
+color12 = ${xrdb:color12}
+color13 = ${xrdb:color13}
+color14 = ${xrdb:color14}
+color15 = ${xrdb:color15}
+
+[module/date]
+type = internal/date
+date = %d-%m-%y%
+time = %H:%M%
+label = %date% %time%
+
+[module/backlight]
+type = internal/backlight
+card = intel_backlight
+enable-scroll = true
+format = <label>
+label = %percentage%%
+
+[module/pulseaudio]
+type = internal/pulseaudio
+use-ui-max = true
+format-volume = <label-volume>
+label-muted = muted
+interval = 5
+click-right = pavucontrol &
+
+[module/network]
+type = internal/network
+interface = wlo1
+label-connected = %downspeed:9%
+
+[module/reddit-modq]
+type = custom/script
+exec = ~/projects/main/q_count.py
+exec-if = "ping -c 5 google.com"
+interval = 300
+
+;[module/mpd]
+;type = internal/mpd
+;host = 127.0.0.1
+;port = 6600
+;interval = 2
+
+[module/i3]
+type = internal/i3
+strip-wsnumbers = true
+enable-click = true
+enable-scroll = true
+wrapping-scroll = true
+; mode
+label-mode = %mode%
+label-mode-padding = 2
+label-mode-background = ${colors.color2}
+; focused workspace
+label-focused = %name%
+label-focused-foreground = ${colors.color0}
+label-focused-background = ${colors.color1}
+label-focused-padding = 2
+; unfocused workspace
+label-unfocused = %name%
+label-unfocused-padding = 1
+; separator
+label-separator = ||
+label-separator-padding = 1
+label-separator-foreground = ${colors.color4}
+; urgent
+label-urgent-foreground = ${colors.color7}
+label-urgent-background = ${colors.color11}
+label-urgent-padding = 4
+; visible?
+label-visible = %index%
+label-visible-underline = #555555
+label-visible-padding = 4

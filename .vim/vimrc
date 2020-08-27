@@ -1,0 +1,18 @@
+set relativenumber
+set nocompatible
+syntax on
+set ruler
+set encoding=utf-8
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'dylanaraps/wal.vim'
+Plug 'chiel92/vim-autoformat'
+Plug 'frazrepo/vim-rainbow'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+call plug#end()
+colorscheme wal
+let g:autoformat_verbosemode=1
+let g:rainbow_active = 1

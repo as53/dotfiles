@@ -214,7 +214,7 @@ bindsym $mod+b exec firefox &
 exec --no-startup-id xbacklight -set 50
 hide_edge_borders both
 exec xrdb -merge ~/.Xresources
-exec --no-startup-id picom -b
+exec --no-startup-id picom -b --experimental-backends
 exec wal -R 
 exec --no-startup-id source ~/scripts/touchpad.sh
 exec_always --no-startup-id source ~/.config/polybar/launch.sh

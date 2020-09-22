@@ -109,7 +109,7 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1: Chromium "
+set $ws1 "1: Chrom(e|ium) "
 set $ws2 "2: VSCode"
 set $ws3 "3: Terminals "
 set $ws4 "4: File Manager "
@@ -190,6 +190,7 @@ bindsym $mod+r mode "resize"
 # # # # # # # #
 #assignments
 assign [class="Chromium"] $ws1
+assign [class="Google-chrome"] $ws1
 assign [class="Code - Insiders"] $ws2
 assign [class="Alacritty"] $ws3
 assign [class="Pcmanfm"] $ws4

@@ -117,7 +117,7 @@ set $ws5 "5: Firefox "
 set $ws6 "6: Okular  "
 set $ws7 "7: Telegram "
 set $ws8 "8: Tor"
-set $ws9 "9"
+set $ws9 "9: Zoom"
 set $ws10 "10"
 
 # switch to workspace
@@ -198,6 +198,7 @@ assign [class="firefox"] $ws5
 assign [class="okular"] $ws6
 assign [class="TelegramDesktop"] $ws7
 assign [class="Tor Browser"] $ws8
+assign [class="zoom"] $ws9
 for_window [window_role="GtkFileChooserDialog"] resize set 640 480
 # for_window [class="Code - Insiders"] fullscreen enable
 for_window [class=".*"] border pixel 0

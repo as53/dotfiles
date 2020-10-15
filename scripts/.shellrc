@@ -11,5 +11,5 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 export QT_QPA_PLATFORMTHEME=qt5ct
 export VISUAL=vim
 export EDITOR="$VISUAL"
-export PF_INFO="ascii title os pkgs kernel wm shell memory"
+export PF_INFO="ascii title os pkgs kernel wm de shell memory"
 pfetch
